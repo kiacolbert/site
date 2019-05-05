@@ -10,7 +10,7 @@ function Home(props) {
       height: "100vh"
     }}>
       <div>
-        <img src="pictures/white_full.png" style={{width: "320px"}}></img>
+        <img src="pictures/white_full.png" style={{width: "320px", marginTop: "2em"}}></img>
         <div>
         <div>
           <a href="https://github.com/reactrewind/react-rewind" target="_blank">

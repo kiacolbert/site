@@ -35,10 +35,7 @@ const App = (props) => {
     <GlobalStyle />
     <Router>
       <div>
-       <NavBar />
       <Route exact path="/" component={Home} />
-      <Route exact path="/demo" component={Demo} />
-      <Route exact path="/about" component={About} />
       </div>
     </Router>
     </>

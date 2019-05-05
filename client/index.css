@@ -1,0 +1,32 @@
+ul, li {
+  font-family: sans-serif;
+}
+ul.header li {
+  display: inline;
+  list-style-type: none;
+  margin: 0;
+}
+ul.header {
+  padding: 0;
+}
+ul.header li a {
+  color: #FFF;
+  font-weight: bold;
+  text-decoration: none;
+  padding: 20px;
+  display: inline-block;
+}
+div.description  {
+  padding: 20px;
+}
+div.description p {
+  background-color: #FFF;
+  padding: 20px;
+  font-size: 2vw;
+  font-family: Arial, Helvetica, sans-serif;
+}
+div.description h1 {
+  padding-left: 20px;
+  font-size: 2vw;
+  font-family: Arial, Helvetica, sans-serif;
+}

@@ -1,5 +1,12 @@
 import React from 'react';
+import { BrowserRouter as Router, Route} from 'react-router-dom';
 import { createGlobalStyle } from 'styled-components';
+// import { createBrowserHistory } from 'history';
+
+import Home from './Home.jsx';
+import Demo from './Demo.jsx';
+import About from './About.jsx';
+import NavBar from './NavBar.jsx';
 // import from styled components to create global styles
 const GlobalStyle = createGlobalStyle`
  html {
@@ -26,56 +33,16 @@ const App = (props) => {
   return (
     <>
     <GlobalStyle />
-    <div style={{
-      display: "flex", 
-      justifyContent: "center", 
-      alignItems: "center",
-      width: "100vw",
-      height: "100vh",
-      // backgroundColor: "red"
-    }}>
+    <Router>
       <div>
-        <img src="pictures/white_full.png" style={{width: "320px"}}></img>
-        <div style={{
-          // display: "flex",
-
-          // justifyContent: "space-evenly",
-          // backgroundColor: "pink"
-        }}>
-        <div>
-          <a href="https://github.com/reactrewind/react-rewind" target="_blank">
-          <button style={{
-            width: "150px", 
-            height: "30px",
-            border: "0px solid black", 
-            borderRadius: "25px",
-            // fontWeight: "600",
-            // fontSize: "13px",
-            padding: "0",
-            marginRight: "3%",
-          }}>
-            GITHUB
-          </button> 
-          </a>
-          <a href="https://chrome.google.com/webstore/detail/react-rewind/gaombjmfkfdcfaeehpflnkkfdbpmjohl?hl=en" target="_blank">
-          <button style={{
-            width: "150px", 
-            height: "30px",
-            border: "0px solid black", 
-            borderRadius: "25px",
-            // fontWeight: "600",
-            // fontSize: "13px",
-            padding: "0",
-          }}>
-            DOWNLOAD
-          </button>
-          </a> 
-        </div>
-        </div>
+       <NavBar />
+      <Route exact path="/" component={Home} />
+      <Route exact path="/demo" component={Demo} />
+      <Route exact path="/about" component={About} />
       </div>
-    </div>
+    </Router>
     </>
   )
 }
 
-export default App
+export default App;
